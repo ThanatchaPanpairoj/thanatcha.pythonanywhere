@@ -27,7 +27,7 @@ def index():
     if request.method == "GET":
         return render_template("main_page.html", comments=Comment.query.all())
 
-    comment = Comment(content=request.form["contents"])
+    comment = Comment(content=request.form["contents"][:50])
     db.session.add(comment)
     db.session.commit()
     return redirect(url_for('index'))
