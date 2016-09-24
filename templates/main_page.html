@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> 
-        <title>My scarset="utf-8"> My Scratchboard page</title>
+        <title>My scarset="utf-8"> My page</title>
     </head>
 
     <body>
@@ -22,20 +22,11 @@
             </div>
         </nav>
         <div class="container">
-
-        <div class="row">
-            This is the first dummy comment.
-        </div>
-
-        <div class="row">
-            This is the the second dummy comment.  It's no more interesting
-            than the first.
-        </div>
-
-        <div class="row">
-            This is the third dummy comment.  It's actually quite exciting!
-        </div>
-
+            {% for comment in comments %}
+                <div class="row">
+                    {{ comment }}
+                </div>
+            {% endfor %}
         <div class = "row">
             <form action="." method="POST">
                 <textarea class = "form-control" name="contents" placeholder="Enter a comment"></textarea>
