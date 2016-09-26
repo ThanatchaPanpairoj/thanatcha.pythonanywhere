@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> 
-        <title>My page</title>
+        <title>My Links</title>
     </head>
 
     <body>
@@ -18,22 +18,17 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">My page</a>
-                    <a class="navbar-brand" href="links">My Links</a>
+                    <a class="navbar-brand" href="links">My links</a>
                 </div>
             </div>
         </nav>
         <div class="container">
-            {% for comment in comments %}
+            {% for name, link in links.items() %}
                 <div class="row">
-                    {{ comment.content }}
+                    {{ name }}
                 </div>
             {% endfor %}
-        <div class = "row">
-            <form action="." method="POST">
-                <textarea class = "form-control" name="contents" placeholder="Enter a comment"></textarea>
-                <input type="submit" value="Post comment">
-            </form>
-        </div>
     </div><!-- /.container -->
     </body>
 </html>
+

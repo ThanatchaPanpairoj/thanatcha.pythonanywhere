@@ -32,3 +32,7 @@ def index():
     db.session.commit()
     return redirect(url_for('index'))
 
+@app.route('/links', methods = ['GET'])
+def link_index():
+    if request.method == 'GET':
+        return render_template("link_page.html", links={"CalCental" : "1eo.me"})
