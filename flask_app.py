@@ -32,7 +32,9 @@ def index():
     db.session.commit()
     return redirect(url_for('index'))
 
+links ={"An aircraft simulator" : "https://github.com/ThanatchaPanpairoj/aircraft-simulator",
+        "The real CalCental" : "http://www.1eo.me",} 
 @app.route('/links', methods = ['GET'])
 def link_index():
     if request.method == 'GET':
-        return render_template("link_page.html", links={"CalCental" : "1eo.me"})
+        return render_template("link_page.html", links=links)

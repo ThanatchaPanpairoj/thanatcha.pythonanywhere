@@ -17,7 +17,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">My page</a>
+                    <a class="navbar-brand" href="/">My page</a>
                     <a class="navbar-brand" href="links">My links</a>
                 </div>
             </div>
@@ -25,7 +25,9 @@
         <div class="container">
             {% for name, link in links.items() %}
                 <div class="row">
-                    {{ name }}
+                    <a href={{link}}>
+                        {{ name }}
+                    </a>
                 </div>
             {% endfor %}
     </div><!-- /.container -->
